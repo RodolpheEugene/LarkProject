@@ -1,7 +1,10 @@
 #!/bin/bash
 #Environmental Variable:export MY_SHELL=$(cd ~Game)
-MY_PWD=$(PWD:=cd START)
-$PWD=MY_PWD
+#MY_PWD=$(PWD:=cd START)
+#$PWD=MY_PWD
+cd START
+START=`pwd`
+
 
 echo " "
 echo "                  WELCOME TO OUR DUNGEON "
@@ -24,7 +27,8 @@ case "$choice" in
 		printf "The outcome for this game to successfully complete all tasks in all different rooms and gain knowledge on some basic commands of Linux.\n"
 		;;
 	4)	
-		echo "$MY_PWD"
+		#echo "$MY_PWD"
+		$pwd
 		;;
 	5)
 		exit 0
@@ -34,6 +38,5 @@ case "$choice" in
 esac
 
 
-#I made some changes
 
 
