@@ -1,0 +1,22 @@
+#!/bin/bash
+#Environmental Variables
+# variable to set colors
+
+GR='\033[0;32'
+BL='\033[0;34'
+NC='\033[0m'
+printf "In this specific room, be careful with your choices\n"
+read -n1 -p "Do you still want to go ahead and exploring either one of the two doors or go back to the main menu?   [y,n]: " option
+echo " "
+case $option in
+	y|Y)
+		echo "You chose to continue"
+		;;
+	n|N)
+		echo "Since you did not want to continue, now you can chose to explore another room."
+
+		echo "$MY_SHELL"
+		
+		;;
+esac
+

@@ -1,0 +1,25 @@
+Welcome to LARK
+>>>>>>>the Linux Activity to Reinforce Knowledge
+
+Name of game: The Dungeon Maze	
+
+Developed by: Robert Rosen, Rodolphe Eugene, Kelly Carrigan, Justin Haas
+
+Narrative: This is a dungeon game where the player will be faced with mini-challenges while navigating thorugh the
+different rooms. Along the way the user will gain the knowledge on how to use linux commands such as,  cd, ls, cat, and (./ or sh). This game was design to be fun and also serve as a mini introduction for new user linux on some of thethree most useful commands in Linux.
+
+Instructions: 
+cd – let’s you navigate through different rooms (For example: cd Room)
+ls – shows you doors in each room (for example: ls )
+cat – shows you the text in text files (For example: cat fileName)
+sh or ./  - let’s you run script files (For example: ./scriptName)
+
+After you download the game and you changed to Dungeon directory. Type (ls)and the type (cat +readme) in command prompt to see game's readme text file. You can either start by running the menu script using (./^Menu) and then choose 4 from the options. That option will send you directly to the game. Another way to access the game is by (cd ~Game) after typing (ls) to reveal the content of the game.
+
+Remember:
+(^)-> script files
+(~)-> directories
+(+)-> text files
+
+
+
