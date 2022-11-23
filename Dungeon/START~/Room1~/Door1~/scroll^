@@ -1,0 +1,25 @@
+#!/bin/bash
+
+
+cat <<EOF
+
+ .-.---------------------------------.-.
+          ((o))                                   )
+           \U/_______          _____         ____/
+             |                                  |
+             |                                  |
+             |                                  |
+             |      This is an area known       |
+             |      for some weird events       |
+             |      over the past few years.    |
+             |      I advise you stay put.      |
+             |                                  |
+             |                                  |
+             |                -Abraham Lincoln  |
+             |                                  |
+             |____    _______    __  ____    ___|KCK
+            /A\                                  \
+           ((o))                                  )
+            '-'----------------------------------'
+
+EOF
