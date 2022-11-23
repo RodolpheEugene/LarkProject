@@ -10,12 +10,13 @@ read -n1 -p "Do you still want to go ahead and exploring either one of the two d
 echo " "
 case $option in
 	y|Y)
-		echo "You chose to continue."
+		echo "You chose to continue. Proceed caution"
 		;;
 	n|N)
-		echo "Since you wished not to continue, you will be redirected to the entrance again."
+		echo "Since you wished not to continue, you will be relocated back in Room."
 
-		$pwd
+		cd Room1~
+		$SHELL
 		
 		;;
 esac

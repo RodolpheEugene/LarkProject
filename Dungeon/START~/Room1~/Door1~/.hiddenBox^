@@ -1,0 +1,14 @@
+#!/bin/bash
+printf "\n\n"
+read -p "Are you sure you want to open this box? [y/n]: " item
+if [[ $item = "Y" || $item = "y" ]]
+	then
+	sleep 1
+		echo "Congratulation!! You found a rare artifact"
+
+else [[ $item = "N" || $item = "n" ]]
+	echo "You made a wise decision!"
+	break
+	
+fi	
+

@@ -1,0 +1,139 @@
+#!/bin/bash
+# set color variables
+BG_WHITE="$(tput setab 7)"
+BG_BLACK="$(tput setab 0)"
+FG_MAGENTA="$(tput setaf 5)"
+FG_BLUE="$(tput setaf 4)"
+OLDPWD=$(cd Dungeon)
+TY="$(tput setaf 3)"
+TR="$(tput sgr0)"
+
+
+# functions
+function cd()
+(
+	pushd $1 1>/dev/null;
+        # unsetting fuctioon
+     	unset cd
+)
+
+function resetVar()
+{
+	echo "Resetting the dungeon, $userName "
+	sleep 2
+	# This is where you could reset variables for new game play
+	unset userName
+}
+
+# save screen
+tput smcup
+
+#Diplay menu until selction == 0
+while [[ $REPLY != 0 ]]; do
+	echo -n ${BG_WHITE} ${FG_MAGENTA}
+
+
+# add ascii art
+	clear
+cat <<EOF
+      ___           ___           ___           ___           ___           ___           ___     
+     /\  \         /\__\         /\__\         /\  \         /\  \         /\  \         /\__\    
+    /::\  \       /:/  /        /::|  |       /::\  \       /::\  \       /::\  \       /::|  |   
+   /:/\:\  \     /:/  /        /:|:|  |      /:/\:\  \     /:/\:\  \     /:/\:\  \     /:|:|  |   
+  /:/  \:\__\   /:/  /  ___   /:/|:|  |__   /:/  \:\  \   /::\~\:\  \   /:/  \:\  \   /:/|:|  |__ 
+ /:/__/ \:|__| /:/__/  /\__\ /:/ |:| /\__\ /:/__/_\:\__\ /:/\:\ \:\__\ /:/__/ \:\__\ /:/ |:| /\__\
+ \:\  \ /:/  / \:\  \ /:/  / \/__|:|/:/  / \:\  /\ \/__/ \:\~\:\ \/__/ \:\  \ /:/  / \/__|:|/:/  /
+  \:\  /:/  /   \:\  /:/  /      |:/:/  /   \:\ \:\__\    \:\ \:\__\    \:\  /:/  /      |:/:/  / 
+   \:\/:/  /     \:\/:/  /       |::/  /     \:\/:/  /     \:\ \/__/     \:\/:/  /       |::/  /  
+    \::/__/       \::/  /        /:/  /       \::/  /       \:\__\        \::/  /        /:/  /   
+     ~~            \/__/         \/__/         \/__/         \/__/         \/__/         \/__/    
+
+EOF
+															
+#cat uses input of a here document
+cat <<EOF
+
+
+   			     Welcome To Our Dungeon
+
+				please Select:
+
+				1. Log in Information
+				2. Tutorial
+				3. Start Dungeon Game
+				0. Quit
+
+EOF
+
+read -p "Enter selection [0-3] > " selection
+tput clear # Clers under the menu
+tput cup 10 0 # positions the cursot
+echo -n ${BG_BLACK}${FG_BLUE}
+tput ed # Clears cursor to end of line
+tput cup 11 0
+
+# Act on selection 
+case $selection in
+	1) read -p "What is your name? " userName
+	sleep 1
+	echo "Hey, $username Enjoy the gameplay and don't get lost!" 
+	
+	;;
+
+	2) echo "This is a basic turotial on the functionality of this game, you will learn more concept later."
+	sleep 1
+	
+	   read -p "Do you want to see the tutorial? [y/n]: " input
+	   if [[ $input = "y" || $input = "Y" ]]
+		then 
+		echo "${TY}cd${TR}to change directory,${TY}ls${TR}to list content inside of each director,${TY}cat${TR} to see the content of files, and ${TY}./${TR} to run scripts."
+		sleep 3	
+	   else [[ $input = "N" || $input = "n" ]] 
+			echo "You chose not to see the tutorial. You will be directed back to main menu..."
+		sleep 2
+	    fi
+	  ;;
+
+	3) if [ new ]
+		then resetVar # resets game variable and settinfs
+		echo "Welcome to Our Dungeon $userName"; sleep 2
+		printf "\n"
+	   fi
+
+		# run start up script	
+		echo "You are more then welcome to start exploring Our Dungeon, $userName "; sleep 2
+		printf "\n"
+		
+		# cd Function to Game to change directory
+			
+		cd START
+		$SHELL
+
+		# using function
+	#	cd START
+
+	   break
+	   ;;	
+	0) read -p "Are you sure you want to leave the game? [y/n]: " exit_Game
+	   if [[ $exit_Game = "Y" || $exit_Game = "y" ]]
+		then
+			break
+			
+		else [[ $exit_Game = "N" || $exit_Game = "n" ]]
+		
+		echo "You will be redirected to to the START menu "
+		# cd to START
+		cd START
+		$SHELL
+	   fi		
+	   ;;
+
+	*) echo "Please select a valid option from the menu"
+	   ;;
+esac
+# Restore saved screen
+done
+tput rmcup
+echo "Program temminated."
+
+
