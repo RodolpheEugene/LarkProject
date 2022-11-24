@@ -154,7 +154,7 @@ case $guess in
 esac	
 
 	
- #       read -p "Do you need a clue or want to guess the person number?  guess 5 for a clue:  " guess
+
 
    
                      
