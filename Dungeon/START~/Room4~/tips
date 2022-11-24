@@ -1,3 +1,3 @@
-To view hidden files do ls -a.
+To view the permissions of files do ls -l.
 
-The hidden files usually contain useful informations that will you along your journey. Please do not Ignore them. 
+The permissions allow you to know what exactly the user, group, and the world have access to within that file.
