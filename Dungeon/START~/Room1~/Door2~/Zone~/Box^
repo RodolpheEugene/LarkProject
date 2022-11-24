@@ -1,0 +1,4 @@
+#!/bin/bash
+
+echo "To open this box use <. fileName>"
+

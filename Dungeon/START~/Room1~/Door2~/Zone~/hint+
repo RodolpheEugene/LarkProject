@@ -1,0 +1,18 @@
+# Have an end game in this room, When you open the box there's a stange item. Do you check it or leave it as it is
+# If they check or touch it, it explodes and the game is over. 
+
+# Sends them back to the main page 
+	#cd Dungeon
+	$SHELL
+
+# use a swich statement or if and else
+
+# ask for the user input for if they want to open the box or not
+
+
+
+
+
+
+# Make the box a script that they can intereract with where it ask them if they really want to open the box [y/n]
+if they do, a strange item detonate and the game is over.
