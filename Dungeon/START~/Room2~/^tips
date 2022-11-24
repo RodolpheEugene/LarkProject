@@ -1,0 +1,40 @@
+#!/bin/bash
+
+cat <<EOF
+                Welcome to the puzzle room.  In here each directory is a puzzle that you must solve.  
+		A wrong answer will result in a loss of silver and gold.  Where a right answer will 
+		win you riches in both precious metals.  To look for clues you can use the grep utility.
+    
+			THE COMMAND LOOKS LIKE THIS
+
+			   grep 'clue' <filename> 
+
+		You will grep for word clue in the files.  The files are hidden so you can not cheat using a cat.
+		
+			THE HIDDEN FILE NAMES THE RIDDLES ARE
+	
+	  		.clue1  .clue2 .clue3 .clue4 .clue5
+EOF
+read -p "Simply type yes(y) or no(n) Do you want to give this a try?" answer
+	 
+	case "$answer" in
+
+		  "")
+			echo -e "You got to enter a y for Yes or an n for no"
+			;;
+		 n|N) 
+			echo "Maybe some other time"
+			;;
+		 y|Y) 
+			echo "Good luck!  There are two riddles needing solving"
+			echo "Just do an ls to see the riddles to run"
+			echo "Remember  ./riddlename is the command"			   	
+			;;
+		   *)
+			echo -e "You got to enter a y for Yes or an n for No"
+                        continue
+                        ;;	
+	esac	
+		
+	
+
