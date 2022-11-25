@@ -1,7 +1,6 @@
 You walk up to a box on the ground and see that it is locked. 
 Try checking the permissions of files within this room to see if you can unlock the code. 
-Hint- To change permissions of a file do CHMOD +### filename. # means the number and get it to where the owner has everything, group and the world only have read access.
-The passcode only needs the three number combination.
+# means the number and get it to where the owner has everything, group and the world only have read access.
 
 
 d = drive 
