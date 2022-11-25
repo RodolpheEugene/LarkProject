@@ -1,0 +1,13 @@
+#!/bin/bash
+printf "\n\n"
+read -p "Be careful on the symbol you choose: " item
+if [[ $item = "*" ]]
+        then
+        sleep 1
+                echo "You made it safely through the door and find the outside world"
+
+else [[ $item = * ]]
+        echo "A trap sets off and a hidden boulder crushes you to instant death"
+
+
+fi
