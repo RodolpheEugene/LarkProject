@@ -1,6 +1,9 @@
-You walk up to a box on the ground and see that it is locked.
-Try checking the permissions of files within this room to see if you can unlock the code.
+You walk up to a box on the ground and see that it is locked. 
+Try checking the permissions of files within this room to see if you can unlock the code. 
+# means the number and get it to where the owner has everything, group and the world only have read access.
 
+
+d = drive 
 r = read permission
 w = write permission
 x = execute permission
@@ -12,4 +15,4 @@ x = execute permission
 4 = 4 (READ)
 3 = 2+1 (WRITE/EXECUTE)
 2 = 2 (WRITE)
-1 = 1 (EXECUTE)
+1 = 1 (EXECUTE) 
