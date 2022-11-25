@@ -1,5 +1,5 @@
 You walk up to a box on the ground and see that it is locked. 
-Try checking the permissions of files within this room to see if you csn unlock the code. 
+Try checking the permissions of files within this room to see if you can unlock the code. 
 
 r = read permission
 w = write permission
