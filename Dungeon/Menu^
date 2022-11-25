@@ -10,12 +10,6 @@ TR="$(tput sgr0)"
 
 
 # functions
-function cd()
-(
-	pushd $1 1>/dev/null;
-        # unsetting fuctioon
-     	unset cd
-)
 
 function resetVar()
 {
@@ -106,7 +100,7 @@ case $selection in
 		
 		# cd Function to Game to change directory
 			
-		cd START
+		cd START~
 		$SHELL
 
 		# using function

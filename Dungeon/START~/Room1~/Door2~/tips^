@@ -2,21 +2,20 @@
 #Environmental Variables
 # variable to set colors
 
-GR='\033[0;32'
-BL='\033[0;34'
-clear='\033[0m'
-printf "In this specific room, be careful with your choices\n"
-read -n1 -p "Do you still want to go ahead and exploring either one of the two doors or go back to the main menu?   [y,n]: " option
+TXT_Y=$(tput setaf 3)
+TXT_R=$(tput sgr0)
 echo " "
+echo "Be careful with the decisions you made in this room"
+echo " "
+read -p "Do you still want to go ahead and explore the Zone area? [y,n]: " option
+echo " "
+sleep 1
 case $option in
 	y|Y)
-		echo "You chose to continue. Proceed caution"
+		echo "You chose to continue. Now you can ${TXT_Y}cd Zone~${TXT_R}"
 		;;
 	n|N)
-		echo "Since you wished not to continue, you will be relocated back in Room."
-
-		cd Room1~
-		$SHELL
+		echo "Since you wished not to continue, type ${TXT_Y}cd -1${TXT_R} in command prompt to relocate back to Room1."
 		
 		;;
 esac
