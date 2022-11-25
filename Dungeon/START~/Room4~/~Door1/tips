@@ -1,5 +1,10 @@
+<<<<<<< HEAD
+You walk up to a box on the ground and see that it is locked. 
+Try checking the permissions of files within this room to see if you csn unlock the code. 
+=======
 You walk up to a box on the ground and see that it is locked.
 Try checking the permissions of files within this room to see if you can unlock the code.
+>>>>>>> 3fd56bfba6875ac51caf07b6f858eb6e738fee4f
 
 r = read permission
 w = write permission
@@ -12,4 +17,9 @@ x = execute permission
 4 = 4 (READ)
 3 = 2+1 (WRITE/EXECUTE)
 2 = 2 (WRITE)
+<<<<<<< HEAD
+1 = 1 (EXECUTE) 
+  
+=======
 1 = 1 (EXECUTE)
+>>>>>>> 3fd56bfba6875ac51caf07b6f858eb6e738fee4f
