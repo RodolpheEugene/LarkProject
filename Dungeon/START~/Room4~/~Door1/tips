@@ -1,6 +1,7 @@
 You walk up to a box on the ground and see that it is locked. 
 Try checking the permissions of files within this room to see if you can unlock the code. 
-Hint- You only need the 3 number combination as the passcode.
+Hint- To change permissions of a file do CHMOD +744 filename.
+
 
 d = drive 
 r = read permission
