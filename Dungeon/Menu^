@@ -117,7 +117,7 @@ case $selection in
 		
 		echo "You will be redirected to to the START menu "
 		# cd to START
-		cd START
+		cd START~
 		$SHELL
 	   fi		
 	   ;;
