@@ -1,6 +1,7 @@
 You walk up to a box on the ground and see that it is locked. 
 Try checking the permissions of files within this room to see if you can unlock the code. 
 # means the number and get it to where the owner has everything, group and the world only have read access.
+Do chmod ### filename
 
 
 d = drive 
