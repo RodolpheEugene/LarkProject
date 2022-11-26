@@ -1,4 +1,5 @@
 #!/bin/bash
+
 printf "\n\n"
 read -p "Be careful on the symbol you choose: " item
 if [[ $item = "*" ]]
