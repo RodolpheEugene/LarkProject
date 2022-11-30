@@ -5,7 +5,7 @@
 TXT_Y=$(tput setaf 3)
 TXT_R=$(tput sgr0)
 echo " "
-echo "Be careful with the decisions you made in this room"
+echo "Be careful with the decisions you make in this room"
 echo " "
 read -p "Do you still want to go ahead and explore the Zone area? [y,n]: " option
 echo " "

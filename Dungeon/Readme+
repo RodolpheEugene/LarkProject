@@ -3,33 +3,26 @@ Welcome to LARK
 
 
 
-<<<<<<< HEAD
-Name of game: The Isolated Maze	
-=======
+
 Name of game: The Isolated Maze
->>>>>>> 00e0932b23fce475661784dd3c7cd8201a41922d
+
 
 Developed by: Rodolphe Eugene, Robert Rosen, Kelly Carrigan, Justin Haas
 
-Narrative: This is a dungeon game where the player will be faced with unique mini-challenges while navigating thorugh the
-different rooms. Along the way the user will gain the knowledge on how to use linux commands such as,  cd, ls, cat, and (./ or sh). This game was design to be fun and also serve as a mini introduction for new user linux on some of thethree most useful commands in Linux.
+Narrative: This is a dungeon Located in Greece where the player will be faced with unique mini-challenges while navigating through different areas. Along the way, the play will gain the knowledge on basic linux commands such as, cd, ls, cat, and (./ or sh). This game was design to be fun and also serve as an intro for new linux users.
 
 Instructions:
-cd – let’s you navigate through different rooms (For example: cd Room)
-ls – shows you doors in each room (for example: ls )
-cat – shows you the text in text files (For example: cat fileName)
-sh or ./  - let’s you run script files (For example: ./scriptName)
-
-<<<<<<< HEAD
-After you download the game and you changed to Dungeon directory. Type (ls)and the type (cat Readme) in command prompt to see the game instructions and rules. You can either start by running the menu script using (./Menu^) and then choose option 3 from the option list and you will be redirected to START. Another way to access the game is by (~cd START~) after typing (ls) to reveal the content of Dungeon.
-=======
-After you download the game and you changed to Dungeon directory. Type (ls)and the type (cat Readme) in command prompt to see the game instructions and rules. 
-You can either start by running the menu script using (./Menu^) and then choose option 3 from the option list and you will be redirected to START. 
-Another way to access the game is by (~cd START~) after typing (ls) to reveal the content of Dungeon.
->>>>>>> 00e0932b23fce475661784dd3c7cd8201a41922d
+cd – Allow you to navigate through different rooms (Ex: cd Room)
+ls – Allow you to see the the objects in each area (Ex: ls )
+cat – Allow you to see the content inside of those objects (Ex: cat fileName)
+sh or ./  - let’s you run script files (Ex: ./scriptName)
 
 
-For later usage remember:
+After you download the game and you changed to Dungeon directory. Type (ls) to see the contents. You can start the game by running the menu script using (./Menu^) and then choose option 3 from the option list. I reccommend you go thorugh the other options as well. They provide useful information.
+
+
+
+Meaning of symbols:
 (^)-> script files
 (~)-> directories
 (+)-> text files

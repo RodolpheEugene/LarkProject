@@ -14,6 +14,7 @@ TR="$(tput sgr0)"
 function resetVar()
 {
 	echo "Resetting the dungeon $userName "
+	echo " "
 	sleep 1
 	# This is where you could reset variables for new game play
 	unset userName
@@ -90,8 +91,9 @@ case $selection in
 
 	3) if [ new ]
 		then resetVar # resets game variable and settinfs
+		echo " "
 		echo "Welcome to Our Dungeon $userName"; sleep 1
-		printf "\n"
+		printf "\n\n"
 	   fi
 
 		# run start up script	
@@ -100,7 +102,7 @@ case $selection in
 		
 		# cd Function to Game to change directory
 			
-		cd START~
+		cd .START~
 		$SHELL
 
 		# using function
@@ -117,7 +119,7 @@ case $selection in
 		
 		echo "You will be redirected to to the START menu "
 		# cd to START
-		cd START~
+		cd .START~
 		$SHELL
 	   fi		
 	   ;;
