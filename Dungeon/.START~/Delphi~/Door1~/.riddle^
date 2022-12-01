@@ -83,7 +83,7 @@ i=1
 while [ $i -le 3 ]
 do
 IFS= read -r -p "Guess $i: " guess
-        if [[ $guess != "Poseiden" ]]
+        if [[ $guess != "Poseidon" ]]
                 then
                 echo -e "Incorrect!\n"
                 let i=i+1
@@ -109,7 +109,7 @@ done
 
 if [[ $i == 4 ]]
 then
-        echo -e "\nYou have run out of guesses\nThe answer was ${bold}Poseiden${norm}\nPiece 2 of the key is \"${Orange}of${NC}\"\n"
+        echo -e "\nYou have run out of guesses\nThe answer was ${bold}Poseidon${norm}\nPiece 2 of the key is \"${Orange}of${NC}\"\n"
 fi
 sleep 2
 
@@ -165,7 +165,7 @@ then
         echo -e "\nYou have run out of guesses\nThe answer was ${bold}Icarus${norm}\nPiece 3 of the key is \"${Purple}Delphi${NC}\"\n"
 fi
 sleep 2
-echo -e "\nNow put all the pieces together (with no spaces)\n And use the key to open the Secret door!\n"
+echo -e "\nNow put all the pieces together\nAnd use the key to open the Secret door!\n"
 
 
 
