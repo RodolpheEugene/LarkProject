@@ -1,0 +1,28 @@
+Welcome to LARK
+>>>>>>>the Linux Activity to Reinforce Knowledge
+
+
+
+
+Name of game: The Isolated Maze
+
+
+Developed by: Rodolphe Eugene, Robert Rosen, Kelly Carrigan, Justin Haas
+
+Narrative: This is a dungeon Located in Greece where the player will be faced with unique mini-challenges while navigating through different areas. Along the way, the play will gain the knowledge on basic linux commands such as, cd, ls, cat, and (./ or sh). This game was design to be fun and also serve as an intro for new linux users.
+
+Instructions:
+cd – Allow you to navigate through different rooms (Ex: cd Room)
+ls – Allow you to see the the objects in each area (Ex: ls )
+cat – Allow you to see the content inside of those objects (Ex: cat fileName)
+sh or ./  - let’s you run script files (Ex: ./scriptName)
+
+
+After you download the game and you changed to Dungeon directory. Type (ls) to see the contents. You can start the game by running the menu script using (./Menu^) and then choose option 3 from the option list. I reccommend you go thorugh the other options as well. They provide useful information.
+
+
+
+Meaning of symbols:
+(^)-> script files
+(~)-> directories
+(+)-> text files

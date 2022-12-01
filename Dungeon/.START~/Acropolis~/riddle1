@@ -1,0 +1,166 @@
+#!/bin/bash
+
+export gold;
+export score=0,$score
+export silver
+export total
+
+FG_MAGENTA="$(tput setaf 5)"
+FG_BLUE="$(tput setaf 4)"
+R="$(tput setab 9)"
+echo ""
+echo ""
+echo " Person 1 "
+echo "   ---  	"     
+echo "  /HAT\ 	"
+echo "---------	"
+echo "   |..|	"
+echo "   ----	"
+echo "    ||	"
+echo " ---||----"       "  Person 2"
+echo "    ||          ---	"                         
+echo "   /  \        /HAT\	"			 
+echo "  /    \     --------				    | |			 	"
+echo "-----------     |..|				    | |				"
+echo "           |    ----				    | |				"
+echo "           |     ||				    | |				"
+echo "           |  ---||---				    | |				"
+echo "           |     ||				    | |				"
+echo "           |    /  \				    | |				"
+echo "           |   /    \				    | |				"
+echo "           --------------      Person 3        	    | |       Person 4				"
+echo "			  |	 ----		    | |         ---              "
+echo "			  |      /HAT\              | |         /HAT\             "
+echo "			  |      -------            | |         -------            "
+echo "			  |      |..|               | |          |..|             "
+echo "                          |       ||                | |           ||              "
+echo "                          |    ---||---             | |        ---||---           "
+echo "                          |       ||                | |           ||              "
+echo "			  |      /  \               | |          /  \             "
+echo "                          |     /    \              | |         /    \            "
+echo "                          --------------------------------------------------------"  
+tput sgr0
+cat <<EOF
+	 	4 people are wearing hats.  There are two red hats and two blue hats.  Person 1 can see Persons 2 and 3's hats.
+		Person 2 can see Person 3's hat.  Person 3 and 4 can not see anyone's hats.  The first person to figure out their
+		hat color first will yell out.   
+
+			WHO IS THE FIRST PERSON TO YELL OUT THEIR HAT COLOR?  
+EOF
+
+read -p "Enter 5 to go back one Directory to grep for a clue or enter a person number to guess who will be the first to know their hat color!  " guess
+
+case $guess in
+	5) echo "I am sending you back to the directory to grep for clues"
+	   sleep 1
+	   echo "Remember that they are hidden files. Must use .filename"
+	   sleep 1
+	   echo  " .clue1  or .clue2 or .clue3 or the hidden file names."
+	   sleep 1
+	   echo "grep for word clue in each of the files for a seperate clue"
+	   sleep 1
+	   echo "Then run the riddle script again.  You remember how to that ./riddle1"
+	   sleep 2
+        
+		cd .
+		$SHELL
+
+	break
+	;;
+	
+	1) echo "That is not correct"
+		sleep 1
+           echo "you just lost some got some gold and silver!"
+                sleep 1
+           echo "you had $gold gold pieces and $silver silver pieces"
+                y=$(($RANDOM%10))
+                gold=$(($gold - $y))
+                x=$(($RANDOM%30))
+                silver=$(($silver - $x))
+                #total=$(($gold - $y))
+           echo "Now you just lost $y "gold" pieces and $x "silver" pieces"
+                sleep 1
+           echo "looks like you now have $gold "gold" pieces and $silver "silver" pieces in total"
+                sleep 1
+           echo "looks like $y pieces of gold and $x pieces of silver were lost to your stockpile!"
+                sleep 2
+
+                ./riddle1
+        ;;
+
+	2) echo "YOU GUESSED IT"
+	   	sleep 1
+	   echo "We are sending you back to the LP room to solve another riddle!"
+		sleep 1
+		y=$(($RANDOM%20))
+		x=$(($RANDOM%50))
+		gold=$(($gold + $y))
+		silver=$(($silver + $x))
+           echo "Now you just won $y "gold" pieces and $x "silver" pieces"
+                sleep 1
+           echo "looks like you now have $gold "gold" pieces and $silver "silver" pieces in total"
+                sleep 1
+           echo "looks like $y pieces of gold and $x pieces of silver were won to your stockpile!"
+                sleep 2
+
+		cd .
+		$SHELL	
+	break
+	;;
+
+        3) echo "That is not correct"
+                sleep 1
+           echo "you just lost some got some gold and silver!"
+		sleep 1
+           echo "you had $gold gold pieces and $silver silver pieces"
+                y=$(($RANDOM%10))
+                gold=$(($gold - $y))
+                x=$(($RANDOM%30))
+                silver=$(($silver - $x))
+                #total=$(($gold - $y))
+           echo "Now you just lost $y "gold" pieces and $x "silver" pieces"
+                sleep 1
+           echo "looks like you now have $gold "gold" pieces and $silver "silver" pieces in total"
+                sleep 1
+           echo "looks like $y pieces of gold and $x pieces of silver were lost to your stockpile!"
+                sleep 2
+
+                ./riddle1
+        ;;
+
+	
+        4) echo "That is not correct"
+                sleep 1
+           echo "you just lost some got some gold and silver!"
+		sleep 1
+           echo "you had $gold gold pieces and $silver pieces"
+                y=$(($RANDOM%10))
+                gold=$(($gold - $y))
+		x=$(($RANDOM%30))
+                silver=$(($silver - $x))
+                #total=$(($gold - $y))
+                sleep 1
+           echo "Now you just lost $y "gold" pieces and $x "silver" pieces"
+                sleep 1
+	   echo "looks like you now have $gold "gold" pieces and $silver "silver" pieces in total"
+        	sleep 1
+           echo "looks like $y pieces of gold and $x pieces of silver were lost to your stockpile!"
+                sleep 2
+
+                ./riddle1
+        ;;
+
+
+esac	
+
+	
+
+
+   
+                     
+
+
+
+
+
+

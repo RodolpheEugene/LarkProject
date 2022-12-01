@@ -1,0 +1,22 @@
+#!/bin/bash
+echo " " 
+read -p "What is the password: " password
+
+while [[ $password != 100 ]]
+do
+read -p "Try Again: " password
+
+if [[ $password = 100 ]]
+then
+	echo " "
+	echo "ACCESS GRANTED"
+	echo " "
+	sleep 1
+	echo "You have found an an ancient artifact. Since you are the first guess to find it. YOU'RE THE WINNER"
+	sleep 2
+	echo " "
+	echo "Thank your for exploring our dungeon and making it out Alie. You're the first to accomplish this. GREAT JOB!"
+	echo " "
+fi
+done
+

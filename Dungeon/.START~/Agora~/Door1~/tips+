@@ -1,0 +1,2 @@
+Hello user, You can use the command ls -a to view hidden files in directories.
+This command will reveal all the files within a directory that was not visible using the ls -a command.
