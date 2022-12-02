@@ -4,7 +4,7 @@
 # Look at my bookmark for example showing how to implement it
 # to calculate demage taking while fighting the clown
 # decremete it every time the user attacks and when their life point reaches zero. They will lose.
-# Use a final if statement to say when lifepoints equal to zero then echo game over
+# Use a final if statement to say when lifepoints equal to zero the echo game over
 printf "\n\n"
 echo "The clown you saw on the wall is standing right in front of you and approching you fast."
 sleep 1
@@ -30,6 +30,7 @@ printf "\n"
 read -p "Do you want to attack the clown? [y/n]: " fight
 if [[ $fight = "Y" || $fight = "y" ]];
 	then
+		sleep 2
 		echo "
 ┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼
 ███▀▀▀██┼███▀▀▀███┼███▀█▄█▀███┼██▀▀▀
@@ -56,7 +57,6 @@ if [[ $fight = "Y" || $fight = "y" ]];
 ┼┼┼┼┼┼┼┼▀▀██┼┼┼┼┼┼┼┼┼┼┼██▀▀┼┼┼┼┼┼┼┼┼
 ┼┼┼┼┼┼┼┼┼┼▀▀┼┼┼┼┼┼┼┼┼┼┼▀▀┼┼┼┼┼┼┼┼┼┼┼
 ┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼
-
 "
 
 		printf "Unfortunately, the clown refused to let you escape Despite the decision you have made!!! Better luck next\n"
@@ -64,8 +64,11 @@ if [[ $fight = "Y" || $fight = "y" ]];
 	elif [[ $fight = "N" || $fight = "n" ]];
 	then
 		sleep 1
+		echo "You have made a smart decision by not attacking the clown"
+		sleep 1
 		echo " "
 		echo "You may use cd .. to go back to the previous room"
 	else
 		echo ""
 fi
+
