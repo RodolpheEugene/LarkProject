@@ -36,11 +36,22 @@ cat <<EOF
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⣇⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
 EOF
 echo "A picture of a clown appear on the wall, the killer clown is known for being very malicious"
+sleep 1
+printf "\n"
+echo "After seing this horrifying drawing on the wall, many of our guests decide to head back to the entrance."
+sleep 1
+printf "\n"
+echo "Going forward may be dangerous but you may discover some interesting new things that other guests failed to see."
+sleep 1
+printf "\n"
+echo "If you still want to proceed, you have the option to do so now."
+sleep 1
+printf "\n\n"
 read -p "You still wish to continue? [y/n]: " clown
 case $clown in
-Y|y) echo "You have made a very bad decision"
+Y|y) echo "You chose to proceed on and now you are relocated inside of the Sketchy_Area. Pick up any objects you find because it may be useful to you."
 	sleep 2
-	cd Area~
+	cd Sketchy_Area~
 	$SHELL
 	;;
 N|n)  echo "You decided to stay in this room"
