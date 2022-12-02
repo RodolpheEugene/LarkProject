@@ -1,22 +1,25 @@
 #!/bin/bash
+
+T_C=$(tput setaf 6) # Cyan
+T_R=$(tput sgr0)    # Reset color
+
 echo " " 
-read -p "What is the password: " password
 
 while [[ $password != 100 ]]
 do
-read -p "Try Again: " password
+read -p "Enter Password: " password
 
 if [[ $password = 100 ]]
 then
 	echo " "
 	echo "ACCESS GRANTED"
 	echo " "
-	sleep 1
+	sleep 2
 	echo "You have found an an ancient artifact. Since you are the first guess to find it. YOU'RE THE WINNER"
 	sleep 2
 	echo " "
 	echo "Thank your for exploring our dungeon and making it out Alie. You're the first to accomplish this. GREAT JOB!"
 	echo " "
+	echo "You may use ${T_C}cd ~${T_R} repeatedly to exit the game"
 fi
 done
-
