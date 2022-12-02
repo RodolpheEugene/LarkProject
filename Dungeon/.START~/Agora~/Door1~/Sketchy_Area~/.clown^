@@ -1,10 +1,8 @@
 #!/bin/bash
+T_C=$(tput setaf 6)
+T_R=$(tput sgr0)
+LP=3
 
-# set variable LP (lifepoint)
-# Look at my bookmark for example showing how to implement it
-# to calculate demage taking while fighting the clown
-# decremete it every time the user attacks and when their life point reaches zero. They will lose.
-# Use a final if statement to say when lifepoints equal to zero the echo game over
 printf "\n\n"
 echo "The clown you saw on the wall is standing right in front of you and approching you fast."
 sleep 1
@@ -23,13 +21,25 @@ sleep 1
 printf "\n\n"
 echo "Since you retrieved a weapon from earlier. You can use it to defend yourself against your enemy."
 sleep 1
+printf "\n\n"
+echo "You only have 3 LifePoints. Be careful with your actions."
+sleep 1
 printf "\n"
-# I need to create a program that will decremement points everytime the use attack the clown.
-# Try a while loop nested with a if and else statement
-# Inside of my if, set condition to where it decretements if user answer "Y"
+
 read -p "Do you want to attack the clown? [y/n]: " fight
-if [[ $fight = "Y" || $fight = "y" ]];
-	then
+  if [[ $fight = "Y" || $fight = "y" ]];
+    then
+      echo " "
+      sleep 1
+      echo "The clown did not see where your first attack came from and seem stunned. "
+      echo " "
+until [[ $LP -eq 0 ]]
+  do
+    read -p "Do you want to attack again: " $fight
+    ((LP=LP-1))
+  echo " "
+    echo "Your LIFEPOINT is: " $LP
+  done
 		sleep 2
 		echo "
 ┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼
@@ -58,17 +68,21 @@ if [[ $fight = "Y" || $fight = "y" ]];
 ┼┼┼┼┼┼┼┼┼┼▀▀┼┼┼┼┼┼┼┼┼┼┼▀▀┼┼┼┼┼┼┼┼┼┼┼
 ┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼
 "
+sleep 1
+echo " "
 
-		printf "Unfortunately, the clown refused to let you escape Despite the decision you have made!!! Better luck next\n"
+		printf "Unfortunately, you have been killed by the clown due to your careless decisions!!! Better luck next\n"
 
 	elif [[ $fight = "N" || $fight = "n" ]];
 	then
 		sleep 1
+    echo " "
 		echo "You have made a smart decision by not attacking the clown"
 		sleep 1
 		echo " "
-		echo "You may use cd .. to go back to the previous room"
+		echo "You may use ${T_C}cd ..${T_R} to go back to the previous room."
 	else
 		echo ""
 fi
+
 
