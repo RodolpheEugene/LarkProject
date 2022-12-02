@@ -15,7 +15,7 @@ case $option in
 		echo "You chose to continue. Now you can ${TXT_Y}cd Zone~${TXT_R}"
 		;;
 	n|N)
-		echo "Since you wished not to continue, type ${TXT_Y}cd -1${TXT_R} in command prompt to relocate back to Room1."
+		echo "Since you wished not to continue, type ${TXT_Y}cd ..${TXT_R} in command prompt to go back to previous location."
 		
 		;;
 esac
