@@ -82,10 +82,10 @@ case $selection in
 	   if [[ $input = "y" || $input = "Y" ]]
 		then 
 		echo "${TY}cd${TR} to change directory,${TY}ls${TR} to list content inside of each director,${TY}cat${TR} to see the content of files, and ${TY}./${TR} to run scripts."
-		sleep 4	
+		sleep 1	
 	   else [[ $input = "N" || $input = "n" ]] 
 			echo "You chose not to see the tutorial. You will be directed back to main menu..."
-		sleep 3
+		sleep 1
 	    fi
 	  ;;
 

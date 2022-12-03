@@ -40,7 +40,7 @@ until [[ $LP -eq 0 ]]
   echo " "
     echo "Your LIFEPOINT is: " $LP
   done
-		sleep 2
+		sleep 1
 		echo "
 ┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼
 ███▀▀▀██┼███▀▀▀███┼███▀█▄█▀███┼██▀▀▀

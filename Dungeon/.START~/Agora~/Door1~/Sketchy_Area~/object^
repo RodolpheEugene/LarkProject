@@ -39,6 +39,6 @@ N|n)
 
 esac
 
-sleep 2
+sleep 1
 printf "\n\n"
 printf "You can use ${T_Y}ls -a${T_R} to see what else you can find in this room."
