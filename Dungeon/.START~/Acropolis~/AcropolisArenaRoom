@@ -50,7 +50,7 @@ if [ $wp = 1 ]
 elif [ $wp = 2 ]
         then
                 echo " ${T_Y}THAT IS THE WRONG WEAPON, YOU HAVE PARISHED ${T_Z}"
-		cd .. .. 
+		cd ..  
 		$SHELL
 else 
 	echo "Try again, this time enter the number 1 or 2"
