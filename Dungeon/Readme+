@@ -19,7 +19,7 @@ cat – Allow you to see the content inside of those objects (Ex: cat fileName)
 sh or ./  - let’s you run script files (Ex: ./scriptName)
 
 
-After you download the game and you changed to Dungeon directory. Type (ls) to see the contents. You can start the game by running the menu script using (./Menu^) and then choose option 3 from the option list. I reccommend you go through the other options as well. They provide useful information.
+After you download the game and you changed to Dungeon directory. Type (ls) to see the contents. You can start the game by running the menu script using (./Menu^) and then choose option 3 from the option list or (cd .START~). I reccommend you go through the other options as well. They provide useful information.
 
 
 
