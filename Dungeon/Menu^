@@ -4,7 +4,6 @@ BG_WHITE="$(tput setab 7)"
 BG_BLACK="$(tput setab 0)"
 FG_MAGENTA="$(tput setaf 5)"
 FG_BLUE="$(tput setaf 4)"
-OLDPWD=$(cd Dungeon)
 TY="$(tput setaf 3)"
 TR="$(tput sgr0)"
 
@@ -13,7 +12,7 @@ TR="$(tput sgr0)"
 
 function resetVar()
 {
-	echo "Resetting the dungeon $userName "
+	echo "Preparing the dungeon $userName "
 	echo " "
 	sleep 1
 	# This is where you could reset variables for new game play
@@ -71,8 +70,11 @@ tput cup 11 0
 case $selection in
 	1) read -p "What is your name? " userName
 	sleep 1
-	echo "Hey, $username Enjoy the gameplay and don't get lost!" 
-	
+	echo " "
+	echo  "Hey, $username Enjoy the gameplay and don't get lost!" 
+	echo " "
+	echo "Press any key to continue"
+	read -n 1
 	;;
 
 	2) echo "This is a basic turotial on the functionality of this game, you will learn more concept later."
@@ -81,10 +83,13 @@ case $selection in
 	   read -p "Do you want to see the tutorial? [y/n]: " input
 	   if [[ $input = "y" || $input = "Y" ]]
 		then 
-		echo "${TY}cd${TR} to change directory,${TY}ls${TR} to list content inside of each director,${TY}cat${TR} to see the content of files, and ${TY}./${TR} to run scripts."
-		sleep 1	
+		echo "${TY}cd${TR} to change directory, ${TY}ls${TR} to list content inside of each director, ${TY}cat${TR} to see the content of files, and ${TY}./${TR} to run scripts."
+		echo " "
+		echo "Press any key to continue"
+		
+		read -n 1
 	   else [[ $input = "N" || $input = "n" ]] 
-			echo "You chose not to see the tutorial. You will be directed back to main menu..."
+		echo "You chose not to see the tutorial. You will be directed back to main menu..."
 		sleep 1
 	    fi
 	  ;;
