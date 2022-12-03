@@ -43,33 +43,51 @@ EOF
 
 read -p "Enter the number of the weapon you wish to buy:        " number
 
-if [ "$gold" -gt 100 ]
+if [ $gold -gt 100 ]
   then	
-	case "$number" in
-
-		1)
+     if [ $number = 1 ]
+	then 
 		echo "you have bought a knife"
-		gold=$((gold - 100))
+		#gold=$((gold - 100))
+		((gold=gold-100))
 		echo "You have $gold "gold" pieces left to spend"
 		sleep 1
 		echo "knife" >> weapons
-		;;
-
-                2)
+		
+        else
                 echo "you have bought a Poison Dart"
-                gold=$((gold - 150))
+                #gold=$((gold - 150))
+		((gold=gold-150))
                 echo "You have $gold "gold" pieces left to spend"
                 sleep 1
 		echo "Poison Dart" >> weapons
-		;;
-	esac
-	echo $gold
-	read -p "Enter the number of weapon to purchase another    " number
-
- 
-
+	       
+     fi
 fi
 
-echo "You cannot afford anymore weapons"
+if [ $gold -gt 100 ]
+  then
+     read -p "Enter the number of the weapon you wish to buy:        " number
+     if [ $number = 1 ]
+        then
+                echo "you have bought a knife"
+                #gold=$((gold - 100))
+                ((gold=gold-100))
+                echo "You have $gold "gold" pieces left to spend"
+                sleep 1
+                echo "knife" >> weapons
 
+        else
+                echo "you have bought a Poison Dart"
+                #gold=$((gold - 150))
+                ((gold=gold-150))
+                echo "You have $gold "gold" pieces left to spend"
+                sleep 1
+                echo "Poison Dart" >> weapons
+
+     fi
+fi
+echo "You cannot afford anymore weapons"
+printf "\n\n\n"
+echo "try the Arena Room next!"
 

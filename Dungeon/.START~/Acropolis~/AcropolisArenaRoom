@@ -1,0 +1,71 @@
+#!/bin/bash
+
+T_Y=$(tput setaf 3)
+T_Z=$(tput sgr0)
+T_B=$(tput setaf 4)
+T_C=$(tput sgr0)
+cat <<EOF
+
+
+
+		${T_Y} WELCOME TO THE ARCROPLIS ARENA ROOM 
+ 
+			MAN and Beast enter
+				
+			ONLY ONE LEAVES ${T_Z}
+
+EOF
+
+cat /$PWD/weapons
+
+echo "A GORGON has just been released in the Arena!"
+echo ""
+echo "If you did a ${T_Y} cat Monsters ${T_Z} you know which weapon to use!"
+
+read -p "Which weapon do you want to grab?  The ${T_Y} knife (ENTER A 1) ${T_Z} or the ${T_Y} Poison Dart(ENTER A 2) ${T_Z}     " wp
+
+
+if [ $wp = 1 ]
+	then
+		echo " ${T_Y}You have killed the GORGON! ${T_Z}"
+
+
+elif [ $wp = 2 ]
+        then
+                echo " ${T_Y}THAT IS THE WRONG WEAPON, YOU HAVE PARISHED ${T_Z}"
+		cd .. .. 
+		$SHELL
+else 
+	echo "Try again, this time enter the number 1 or 2"
+	./AcropolisArenaRoom
+fi
+
+printf "\n\n\n\n\n"
+echo " RELEASE ANOTHER MONSTER!!!"
+printf "\n\n\n"
+echo "A GRIFFEN has just been released in the Arena!"
+echo ""
+echo "If you did a ${T_Y} cat Monsters ${T_Z} you know which weapon to use!"
+
+read -p "Which weapon do you want to grab?  The ${T_Y} knife (ENTER A 1) ${T_Z} or the ${T_Y} Poison Dart(ENTER A 2) ${T_Z}     " wp
+
+if [ $wp = 1 ]
+        then
+                echo " ${T_Y}You have killed the GRIFFEN! ${T_Z}"
+
+
+elif [ $wp = 2 ]
+        then
+                echo " ${T_Y}THAT IS THE WRONG WEAPON, YOU HAVE PARISHED ${T_Z}"
+                cd .. ..
+                $SHELL
+else
+        echo "Try again, this time enter the number 1 or 2"
+	sleep 1
+	
+        ./AcropolisArenaRoom
+fi
+
+printf "\n\n\n\n"
+echo "CONGRATULATIONS YOU MAKE OUT OF THE CITY's ARENA ALIVE!!!!!!"
+

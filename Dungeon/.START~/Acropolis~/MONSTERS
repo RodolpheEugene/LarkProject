@@ -1,0 +1,30 @@
+#!/bin/bash
+T_C=$(tput setaf 6)
+T_R=$(tput sgr0)
+T_Y=$(tput setaf 3)
+T_Z=$(tput sgr0)
+
+printf "\n\n\n\n\n\n"
+echo "       ${T_C}Griffens exist in Acropolis${T_R}"
+printf "\n\n"
+echo "You can't miss them"
+echo "They have a body of a LION and the head and wings of an EAGLE"
+printf "\n\n"
+echo "       ${T_C}To kill a Griffen you will need to throw a Poison Dart!${T_R}"
+printf "\n\n"
+
+echo "       ${T_C}To check your weapons stash  do a ${T_Y} cat weaponsBag ${T_Z}${T_C}"
+printf "\n\n\n\n\n"
+
+echo "       ${T_C}GORGONS exist in Acropolis too${T_R}"
+printf "\n\n"
+echo "You can't miss them"
+echo "They have SNAKES for hair!"
+printf "\n\n"
+echo "       ${T_C}To kill a Gorgon you will need to throw a knife!${T_R}"
+printf "\n\n"
+
+echo "       ${T_C}To check your weapons stash  do a ${T_Y} cat weaponsBag ${T_Z}${T_C}"
+printf "\n\n\n"
+echo " YOU CANT GET WEAPONS by going into the weaponsRoom ${T_Y} remember how to run it?  ./weaponsRoom ${T_Z} "
+printf "\n\n\n\n\n"

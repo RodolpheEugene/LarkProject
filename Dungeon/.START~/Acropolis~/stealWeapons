@@ -1,0 +1,14 @@
+
+
+If you run out of weapons I will teach you how steal them!!!
+
+type in the command
+
+	echo "knife" >> weaponsBag
+	echo "Poison Dart" >> weaponsBag
+
+type that exactly as it is!
+
+That command will refill your weaponsBag with 1 weapon each by appending the empty file!
+
+
