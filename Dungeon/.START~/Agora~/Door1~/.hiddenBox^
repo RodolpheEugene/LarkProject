@@ -5,10 +5,18 @@ if [[ $item = "Y" || $item = "y" ]]
 	then
 	sleep 1
 		echo "Congratulation!! You found a rare artifact"
+		echo " "
+		sleep 1
+		echo " It is an hour glass made out of gold"
+		sleep 2
+		echo "This item can make you some fortune. Keep a hold of it."
 
 else [[ $item = "N" || $item = "n" ]]
-	echo "You made a wise decision!"
-	break
+		echo "You made a wise decision!"
+		sleep 1
+		echo " "
+		echo "You don't what could have been hidden in the box"
+		break
 	
 fi	
 

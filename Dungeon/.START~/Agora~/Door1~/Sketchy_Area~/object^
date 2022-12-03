@@ -1,0 +1,44 @@
+#!/bin/bash
+
+T_Y=$(tput setaf 3) # Yellow
+T_R=$(tput sgr0) # Reset color
+
+
+printf "\n\n"
+printf "You can see this object on the floor from far but you are not sure what it is yet"
+sleep 1
+printf "\n\n"
+printf "You approached the item to comfirm what it is, but when you got close. You realize it is a knife."
+sleep 1
+printf "\n\n"
+printf "Now you are thinking, why would there be a knife sitting around in this room. It has to be here for a reason."
+sleep 1
+printf "\n\n"
+read -p "Do you want to pick up the knife? [y/n] : " knife
+
+case $knife in
+
+Y|y)
+	echo "
+ ______________________________________
+|________|_____________________________|
+                
+
+	"
+	
+	echo "You picked up the knife."
+	;;
+
+N|n)
+	echo "You should have picked up the knife."
+;;
+
+*)
+	echo "Invalid Entry"
+;;
+
+esac
+
+sleep 2
+printf "\n\n"
+printf "You can use ${T_Y}ls -a${T_R} to see what else you can find in this room."

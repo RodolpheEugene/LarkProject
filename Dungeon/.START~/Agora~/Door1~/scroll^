@@ -10,12 +10,13 @@ cat <<EOF
              |                                  |
              |                                  |
              |      This is an area known       |
-             |      for some weird events       |
-             |      over the past few years.    |
+             |      for some weird events  that |
+             |      took placeover the past     |
+	     |	    few years.                 |
              |      I advise you stay put.      |
              |                                  |
              |                                  |
-             |                -Abraham Lincoln  |
+             |                                  |
              |                                  |
              |____    _______    __  ____    ___|KCK
             /A\                                  \
@@ -23,3 +24,4 @@ cat <<EOF
             '-'----------------------------------'
 
 EOF
+
