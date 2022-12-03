@@ -17,6 +17,17 @@ cat <<EOF
 EOF
 
 cat /$PWD/weapons
+#wpnt=""
+#wpntyp1=$(ps -ef | awk '/knife/') /$PWD/weapons 
+#wpntype1=$(ps -ef | grep "knife" ) /$PWD/weapons
+#gawk 'knife' /$PWD/weapons >> $wpnt
+#echo $wpnt
+
+wpn=$(cat /$PWD/weapons | grep knife) n
+wpn1=$(cat /$PWD/weapons | grep "PoisonDart")
+
+
+
 
 echo "A GORGON has just been released in the Arena!"
 echo ""
@@ -27,7 +38,13 @@ read -p "Which weapon do you want to grab?  The ${T_Y} knife (ENTER A 1) ${T_Z} 
 
 if [ $wp = 1 ]
 	then
-		echo " ${T_Y}You have killed the GORGON! ${T_Z}"
+		if [ $wpn = "knife" ]
+			then
+
+				echo " ${T_Y}You have killed the GORGON! ${T_Z}"
+			else
+				echo " you have died.  you have no knife"
+		fi	
 
 
 elif [ $wp = 2 ]
@@ -49,12 +66,16 @@ echo "If you did a ${T_Y} cat Monsters ${T_Z} you know which weapon to use!"
 
 read -p "Which weapon do you want to grab?  The ${T_Y} knife (ENTER A 1) ${T_Z} or the ${T_Y} Poison Dart(ENTER A 2) ${T_Z}     " wp
 
-if [ $wp = 1 ]
+if [ $wp = 2 ]
         then
-                echo " ${T_Y}You have killed the GRIFFEN! ${T_Z}"
+		if [ $wpn1 = "PoisonDart" ]
+			then
+		                echo " ${T_Y}You have killed the GRIFFEN! ${T_Z}"
+			else
+				echo " You have died, you do not have a PoisonDart"
+		fi
 
-
-elif [ $wp = 2 ]
+elif [ $wp = 1 ]
         then
                 echo " ${T_Y}THAT IS THE WRONG WEAPON, YOU HAVE PARISHED ${T_Z}"
                 cd .. ..
