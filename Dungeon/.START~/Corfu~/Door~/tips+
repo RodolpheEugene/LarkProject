@@ -1,20 +1,4 @@
-You walk up to a box on the ground and see that it is locked. 
-Try checking the permissions of files within this room to see if you can unlock the code. 
-# means the number and get it to where the owner has everything, group and the world only have read access.
-Do chmod ### filename
+#!/bin/bash
 
-
-d = drive 
-r = read permission
-w = write permission
-x = execute permission
-- = owner has no permission
-
-7 = 4+2+1 (READ/WRITE/EXECUTE)
-6 = 4+2 (READ/WRITE)
-5 = 4+1 (READ/EXECUTE)
-4 = 4 (READ)
-3 = 2+1 (WRITE/EXECUTE)
-2 = 2 (WRITE)
-1 = 1 (EXECUTE) 
-
+You walk up to a shop owner and see what they have for sale. 
+You want to fit into the culture and get a cloak. 
