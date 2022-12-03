@@ -1,0 +1,75 @@
+#!/bin/bash
+
+gold=300
+
+
+
+T_B=$(tput setaf 3)
+T_C=$(tput sgr0)
+
+cat <<EOF
+
+
+
+
+	You have been transported into an area of the city
+	where your gold will be needed.  Creatures lurk
+	and you will need to defend yourself from them
+	there are a list of monsters you can go back to read about.
+	Important information on what weapon can hurt them
+	is there.	
+EOF
+
+printf "\n\n"
+
+echo ""
+echo ""
+echo "You have${T_B} $gold "gold" pieces ${T_C}you made solving the riddle"
+echo ""
+echo ""
+cat <<EOF
+
+      ${T_B}	USE YOUR GOLD TO BUY SOME WEAPONS   ${T_C}
+
+
+	Weapons List
+	
+	Weapon			Cost
+	
+	1. ${T_B} Knife ${T_C}		${T_B}100 gold ${T_C}pieces
+	2. ${T_B} Poison Dart${T_C} 	${T_B}150 gold${T_C} pieces
+      
+EOF
+
+read -p "Enter the number of the weapon you wish to buy:        " number
+
+if [ "$gold" -gt 100 ]
+  then	
+	case "$number" in
+
+		1)
+		echo "you have bought a knife"
+		gold=$((gold - 100))
+		echo "You have $gold "gold" pieces left to spend"
+		sleep 1
+		echo "knife" >> weapons
+		;;
+
+                2)
+                echo "you have bought a Poison Dart"
+                gold=$((gold - 150))
+                echo "You have $gold "gold" pieces left to spend"
+                sleep 1
+		echo "Poison Dart" >> weapons
+		;;
+	esac
+	echo $gold
+	read -p "Enter the number of weapon to purchase another    " number
+
+ 
+
+fi
+
+echo "You cannot afford anymore weapons"
+
+

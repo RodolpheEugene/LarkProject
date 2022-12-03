@@ -1,25 +1,30 @@
 #!/bin/bash
 
-export gold;
-export score=0,$score
-export silver
-export total
+gold=300
 
-FG_MAGENTA="$(tput setaf 5)"
-FG_BLUE="$(tput setaf 4)"
-R="$(tput setab 9)"
+
+
+#FG_MAGENTA="$(tput setaf 5)"
+#FG_BLUE="$(tput setaf 4)"
+
+T_B=$(tput setaf 6)
+T_C=$(tput sgr0)
+T_Y=$(tput setaf 3)
+T_Z=$(tput sgr0)
+T_R=$(tput setaf 1)
+T_S=$(tput sgr0)
 echo ""
 echo ""
-echo " Person 1 "
+echo "${T_Y} Person 1${T_Z} "
 echo "   ---  	"     
-echo "  /HAT\ 	"
+echo "${T_Y}  /HAT\ ${T_Z} 	"
 echo "---------	"
 echo "   |..|	"
 echo "   ----	"
 echo "    ||	"
-echo " ---||----"       "  Person 2"
+echo " ---||----"       "${T_B}  Person 2 ${T_C}"
 echo "    ||          ---	"                         
-echo "   /  \        /HAT\	"			 
+echo "   /  \       ${T_B} /HAT\ ${T_C}	"			 
 echo "  /    \     --------				    | |			 	"
 echo "-----------     |..|				    | |				"
 echo "           |    ----				    | |				"
@@ -28,9 +33,9 @@ echo "           |  ---||---				    | |				"
 echo "           |     ||				    | |				"
 echo "           |    /  \				    | |				"
 echo "           |   /    \				    | |				"
-echo "           --------------      Person 3        	    | |       Person 4				"
+echo "           --------------    ${T_Y} Person 3 ${T_Z}       	    | |     ${T_B}  Person 4	${T_C}			"
 echo "			  |	 ----		    | |         ---              "
-echo "			  |      /HAT\              | |         /HAT\             "
+echo "			  |   ${T_Y}   /HAT\ ${T_Z}             | |       ${T_B}  /HAT\ ${T_C}            "
 echo "			  |      -------            | |         -------            "
 echo "			  |      |..|               | |          |..|             "
 echo "                          |       ||                | |           ||              "
@@ -41,89 +46,104 @@ echo "                          |     /    \              | |         /    \    
 echo "                          --------------------------------------------------------"  
 tput sgr0
 cat <<EOF
-	 	4 people are wearing hats.  There are two red hats and two blue hats.  Person 1 can see Persons 2 and 3's hats.
-		Person 2 can see Person 3's hat.  Person 3 and 4 can not see anyone's hats.  The first person to figure out their
-		hat color first will yell out.   
+		
+EOF
+cat <<EOF
+	 	4 people are wearing hats.  They know there are two YELLOW hats and two BLUE hats.  Person 1 can see the hat colors of Persons 2 and 3.
+		Person 2 can see the hat color of Person 3..  Person 3 and 4 can not see anyone's hats. If they are able to figure out their own hat
+		color, they must yell out!
 
-			WHO IS THE FIRST PERSON TO YELL OUT THEIR HAT COLOR?  
+
+
+
+
+			WHO IS THE FIRST PERSON TO YELL OUT THEIR HAT COLOR? 
+
+
+
+
+
+
+
+
+
+
+ 
 EOF
 
-read -p "Enter 5 to go back one Directory to grep for a clue or enter a person number to guess who will be the first to know their hat color!  " guess
+#echo "You have $gold "gold" pieces to start with cause we are a generous people"
+sleep 1
+printf "\n\n"
+echo "If you need a hint enter 5 and you will be taken back to grep for clues!"
+sleep 1
+#echo "When you are ready to make a guess after looking for clues simply enter the commmand ${T_Y} ./riddle1 ${T_Z}"
+sleep 1
+echo "Or enter the persons number (1,2,3 or 4) if you think you know the answer"
+sleep 1
 
+read -p "Enter your selection here      " guess
+printf "\n\n\n\n"
 case $guess in
 	5) echo "I am sending you back to the directory to grep for clues"
 	   sleep 1
-	   echo "Remember that they are hidden files. Must use .filename"
+	   echo "Remember that they are hidden files. Must use ${T_B} grep 'clue ' .clue# ${T_C}"
 	   sleep 1
-	   echo  " .clue1  or .clue2 or .clue3 or the hidden file names."
+	   echo  "${T_Y} .clue1  or .clue2 or .clue3 .clue4 .clue5 ${T_Z} are your choices"
 	   sleep 1
-	   echo "grep for word clue in each of the files for a seperate clue"
-	   sleep 1
-	   echo "Then run the riddle script again.  You remember how to that ./riddle1"
+	   echo "When you are ready to make a guess after looking for clues simply enter the commmand ${T_Y} ./riddle1 ${T_Z}"
 	   sleep 2
         
 		cd .
 		$SHELL
-
-	break
 	;;
 	
 	1) echo "That is not correct"
 		sleep 1
-           echo "you just lost some got some gold and silver!"
+           echo "you just lost some got some gold"
                 sleep 1
-           echo "you had $gold gold pieces and $silver silver pieces"
+           echo "you had $gold gold pieces"
                 y=$(($RANDOM%10))
                 gold=$(($gold - $y))
-                x=$(($RANDOM%30))
-                silver=$(($silver - $x))
-                #total=$(($gold - $y))
-           echo "Now you just lost $y "gold" pieces and $x "silver" pieces"
+                
+           echo "Now you just lost $y "gold" pieces"
                 sleep 1
-           echo "looks like you now have $gold "gold" pieces and $silver "silver" pieces in total"
+           echo "looks like you now have $gold "gold" pieces"
                 sleep 1
-           echo "looks like $y pieces of gold and $x pieces of silver were lost to your stockpile!"
-                sleep 2
 
                 ./riddle1
         ;;
 
 	2) echo "YOU GUESSED IT"
 	   	sleep 1
-	   echo "We are sending you back to the LP room to solve another riddle!"
-		sleep 1
+	  # echo "The city of ACROPOLIS is full of surprises"
+	
 		y=$(($RANDOM%20))
-		x=$(($RANDOM%50))
 		gold=$(($gold + $y))
-		silver=$(($silver + $x))
-           echo "Now you just won $y "gold" pieces and $x "silver" pieces"
+
+           echo "Now you just won $y "gold" pieces"
                 sleep 1
-           echo "looks like you now have $gold "gold" pieces and $silver "silver" pieces in total"
+           echo "looks like you now have $gold "gold" pieces"
                 sleep 1
-           echo "looks like $y pieces of gold and $x pieces of silver were won to your stockpile!"
-                sleep 2
+	   echo "${T_B}The city of ACROPOLIS is full of surprises${T_C}"
+           echo "${T_B}You have been collecting gold, Why you may ask?${T_C}"
+	   echo "${T_B}You will need it to leave to the city alive${T_C}"
 
 		cd .
 		$SHELL	
-	break
 	;;
 
         3) echo "That is not correct"
                 sleep 1
-           echo "you just lost some got some gold and silver!"
+           echo "you just lost some got some gold"
 		sleep 1
-           echo "you had $gold gold pieces and $silver silver pieces"
+           echo "you had $gold gold pieces"
                 y=$(($RANDOM%10))
                 gold=$(($gold - $y))
-                x=$(($RANDOM%30))
-                silver=$(($silver - $x))
-                #total=$(($gold - $y))
-           echo "Now you just lost $y "gold" pieces and $x "silver" pieces"
+                
+           echo "Now you just lost $y "gold" pieces"
                 sleep 1
-           echo "looks like you now have $gold "gold" pieces and $silver "silver" pieces in total"
+           echo "looks like you now have $gold "gold" pieces"
                 sleep 1
-           echo "looks like $y pieces of gold and $x pieces of silver were lost to your stockpile!"
-                sleep 2
 
                 ./riddle1
         ;;
@@ -131,21 +151,17 @@ case $guess in
 	
         4) echo "That is not correct"
                 sleep 1
-           echo "you just lost some got some gold and silver!"
+           echo "you just lost some got some gold"
 		sleep 1
-           echo "you had $gold gold pieces and $silver pieces"
+           echo "you had $gold gold pieces"
                 y=$(($RANDOM%10))
                 gold=$(($gold - $y))
-		x=$(($RANDOM%30))
-                silver=$(($silver - $x))
-                #total=$(($gold - $y))
+		
                 sleep 1
-           echo "Now you just lost $y "gold" pieces and $x "silver" pieces"
+           echo "Now you just lost $y "gold" pieces"
                 sleep 1
-	   echo "looks like you now have $gold "gold" pieces and $silver "silver" pieces in total"
+	   echo "looks like you now have $gold "gold" pieces"
         	sleep 1
-           echo "looks like $y pieces of gold and $x pieces of silver were lost to your stockpile!"
-                sleep 2
 
                 ./riddle1
         ;;

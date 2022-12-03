@@ -1,7 +1,0 @@
-To view the permissions of files do ls -l.
-
-The permissions allow you to know what exactly the user, group, and the world have access to within that file.
----------------------------------------------------------------------------------------------------------------
-To see symbols coorelated with the listed files, ls -F, the –F option appends a slash (/) to files that are directories, an asterisk to files that are executable, and an at sign (@) to files that are symbolic links. 
-
-This allows you to have another way of finding out what kind of file it is without having to memorize the color differencing. 

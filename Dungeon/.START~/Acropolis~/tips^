@@ -1,34 +1,45 @@
 #!/bin/bash
 
+T_B=$(tput setaf 6)
+T_C=$(tput sgr0)
+T_Y=$(tput setaf 3)
+T_Z=$(tput sgr0)
+T_G=$(tput setaf 2)
+T_H=$(tput sgr0)
+printf "\n\n"
 cat <<EOF
-                Welcome to the puzzle room.  In here each directory is a puzzle that you must solve.  
-		A wrong answer will result in a loss of silver and gold.  Where a right answer will 
-		win you riches in both precious metals.  To look for clues you can use the grep utility.
+                Welcome to the gates of${T_Y} Acropolis${T_Z}. To gain entrance through the gates 
+		You will need to solve a riddle.  But you will be rewarded generously for doing so.
+	        We are a civilized people in the great city of Acropolis.  We offer our guests clues
+		to the riddle.  To look for clues you can use the grep utility.
     
 			THE COMMAND LOOKS LIKE THIS
 
-			   grep 'clue' <filename> 
+	             ${T_B} grep 'clue' <filename> ${T_C}
 
 		You will grep for word clue in the files.  The files are hidden so you can not cheat using a cat.
 		
 			THE HIDDEN FILE NAMES THE RIDDLES ARE
 	
-	  		.clue1  .clue2 .clue3 .clue4 .clue5
+	  	${T_B}.clue1  .clue2 .clue3 .clue4 .clue5 ${T_C}
 EOF
-read -p "Simply type yes(y) or no(n) Do you want to give this a try?" answer
-	 
+read -p "Simply type yes(y) to pass by the gates or no(n) to come back later" answer
+printf "\n\n"	 
 	case "$answer" in
 
 		  "")
 			echo -e "You got to enter a y for Yes or an n for no"
+			printf "\n\n"
 			;;
 		 n|N) 
 			echo "Maybe some other time"
+			printf "\n\n"
 			;;
 		 y|Y) 
-			echo "Good luck!  There are two riddles needing solving"
-			echo "Just do an ls to see the riddles to run"
-			echo "Remember  ./riddlename is the command"			   	
+			echo "Good luck solving the riddle"
+			printf "\n\n"
+			#echo "Remember  ./riddlename is the command"
+			./riddle1			   	
 			;;
 		   *)
 			echo -e "You got to enter a y for Yes or an n for No"
