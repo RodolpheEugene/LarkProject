@@ -1,7 +1,0 @@
-#!/bin/bash
-
-cat <<EOF 
-
-              Welcome to the dungeon of Corfu! We here at Corfu have a great community and offer great oppurtunities, 
-              Come on in and explore our great city, see what there is to do!
-EOF

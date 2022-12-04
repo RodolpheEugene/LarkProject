@@ -1,7 +1,0 @@
-#!/bin/bash
-
-cat <<EOF 
-                  You walk up to a shop owner and see what they have for sale. 
-                  You want to fit into the culture and get a cloak. 
-                  To buy one 
-EOF
