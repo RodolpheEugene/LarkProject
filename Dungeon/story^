@@ -5,9 +5,9 @@ printf "Once upon a time, there was a city located in the north side of Greece, 
 sleep 1
 printf "On the day of January 1 of 1895, a dreadful event took place and it left Saronida in ruins. Until this day, this event remain a mystery.\n\n"
 sleep 1
-printf "The event that took place on this horrifying day involved many high ranking individuals in Saronida at the time and it resulted in a act of retaliation from another country well known as Turkey.\n\n"
+printf "The event that took place on this horrifying day involved many high-ranking individuals in Saronida at the time and it resulted in an act of retaliation from another country well known as Turkey.\n\n"
 sleep 1
-printf "Ever since this incident took place, a lot of the building in the city are unrecognizable. Out of the building that was destroyed, one of the building remained in tact and tourists would travel to Greece to visit that specific building.\n\n"
+printf "Ever since this incident took place, a lot of the building in the city are unrecognizable. Out of the building that was destroyed, one of the building remained intact and tourists would travel to Greece to visit that specific building.\n\n"
 sleep 1
 printf "In the span of 5 years, more than a few hundred-thousands of people visited this famous building.\n\n"
 sleep 1
@@ -19,4 +19,4 @@ printf "Ever since then, the top executives in the city put out a flyer stating 
 sleep 1
 printf "The executives did not expect their proposition to actually work and now they have people from other countries coming to Greece to explore the building and in hope of collecting the reward.\n\n"
 sleep 1
-printf "This is how the famous maze known as The Isolated Maze was created. Now, more than a thousands guest evey year go explore this maze."
+printf "This is how the famous maze known as The Isolated Maze was created. Now, more than a thousands guest every year go explore this maze."
