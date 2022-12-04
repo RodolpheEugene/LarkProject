@@ -36,7 +36,7 @@ case $fight in
 	No|no)
 	echo "YOU CAN RETURN WHEN YOU ARE READY!"
 	sleep 1
-	return	
+	exit 1	
 ;;
 esac
 
