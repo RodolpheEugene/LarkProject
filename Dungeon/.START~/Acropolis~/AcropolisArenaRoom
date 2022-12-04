@@ -23,7 +23,7 @@ cat /$PWD/weapons
 #gawk 'knife' /$PWD/weapons >> $wpnt
 #echo $wpnt
 
-wpn=$(cat /$PWD/weapons | grep knife) n
+wpn=$(cat /$PWD/weapons | grep knife) 
 wpn1=$(cat /$PWD/weapons | grep "PoisonDart")
 
 
@@ -38,13 +38,7 @@ read -p "Which weapon do you want to grab?  The ${T_Y} knife (ENTER A 1) ${T_Z} 
 
 if [ $wp = 1 ]
 	then
-		if [ $wpn = "knife" ]
-			then
-
-				echo " ${T_Y}You have killed the GORGON! ${T_Z}"
-			else
-				echo " you have died.  you have no knife"
-		fi	
+		echo " ${T_Y}You have killed the Gorgon! ${T_Z}"	
 
 
 elif [ $wp = 2 ]
@@ -68,12 +62,9 @@ read -p "Which weapon do you want to grab?  The ${T_Y} knife (ENTER A 1) ${T_Z} 
 
 if [ $wp = 2 ]
         then
-		if [ $wpn1 = "PoisonDart" ]
-			then
-		                echo " ${T_Y}You have killed the GRIFFEN! ${T_Z}"
-			else
-				echo " You have died, you do not have a PoisonDart"
-		fi
+	
+	        echo " ${T_Y}You have killed the GRIFFEN! ${T_Z}"
+			
 
 elif [ $wp = 1 ]
         then
@@ -89,4 +80,5 @@ fi
 
 printf "\n\n\n\n"
 echo "CONGRATULATIONS YOU MAKE OUT OF THE CITY's ARENA ALIVE!!!!!!"
+
 
