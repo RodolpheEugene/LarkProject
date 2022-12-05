@@ -23,7 +23,7 @@ cat <<EOF
 	
 	  	${T_B}.clue1  .clue2 .clue3 .clue4 .clue5 ${T_C}
 EOF
-read -p "Simply type yes(y) to pass by the gates or no(n) to come back later" answer
+read -p "Simply type yes(y) to pass by the gates or no(n) to come back later: " answer
 printf "\n\n"	 
 	case "$answer" in
 
